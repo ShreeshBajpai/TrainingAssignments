@@ -253,3 +253,5 @@ exec sp_CelebritiesList
 exec sp_BrandsList
 
 exec sp_not_endorsed_brands
+
+
