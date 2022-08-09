@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>   
+   </head>
+
+    <body>
+           <div class="jumbotron">
+  <h2 class="display-4">Products</h2>
+  <p class="lead">This is page which shows all the prducts enlisted on this site.</p>
+  <hr class="my-4">
+  <p>It enlists all the fashion products including different brands worlwide.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">See all Products</a> </p>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="C:\Users\shreesh.bajpai\Desktop\images\watch.webp" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Women Watch</h5>
+                  <p class="card-text">Titan Womens Watch</p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="C:\Users\shreesh.bajpai\Desktop\images\watch2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Men Watch</h5>
+                  <p class="card-text">Evergreen Men Watch</p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="C:\Users\shreesh.bajpai\Desktop\images\watch3.webp" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Men Watch</h5>
+                  <p class="card-text">Evergreen Men Watch</p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+                <div>
+                    <h2 class="display-10">Contact Us</h2>
+                    <p class="lead"> <Address> <b> Phone :- +91-9838425436 </Address> </b></p>
+                    <p class="lead"> <Address> <b> Email :- </b> doonwatchstore@gmail.com </Address> </p>
+                    <p class="lead"> <Address> <b> Outlet Address :- </b>  89, Doon Vihar, Jakhan,
+                    <br> Dehradun, Uttarakhand <br> PIN- 248001 </Address></p>
+                    <p class="lead"> <Address> <b> Instagram :- @doonwatchstore </Address> </b></p>
+                </div>
+
+                <div>
+                    <p>Click the button to get your coordinates.</p>
+                    <button onclick="getLocation()">Get Coordinates</button>
+                    <p id="demo"></p>
+                        <script>
+                            var x = document.getElementById("demo");
+
+                        function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else { 
+                            x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                        }
+
+                    function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude;
+                    }
+                        </script>
+
+                </div>
+              </div>
+              
+              <div id="map" style="width:400px;height:400px;background:grey"></div>  
+                <script>  
+                function myMap() {  
+                var mapOptions = {  
+                    center: new google.maps.LatLng(51.5, -0.12),  
+                    zoom: 10,  
+                    mapTypeId: google.maps.MapTypeId.HYBRID  
+                };
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);  
+                }  
+                </script>
+    </body>
+</html>
