@@ -1,0 +1,17 @@
+#heading{
+   font-size: large;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sample{
+    
+}
+h2{
+    color: blueviolet; font-size: 11 px;
+}
+.maiden{
+    font-style: italic;
+    font-size: medium;
+}
+body{
+        background-image: url("bggradient.jpg");
+}
